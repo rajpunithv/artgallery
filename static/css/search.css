@@ -1,0 +1,18 @@
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: calc(100% - 20px) 50%; /* Adjust the value to position the icon correctly */
+  background-repeat: no-repeat;
+  padding: 12px 40px 12px 20px; /* Swap padding values for right and left */
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
