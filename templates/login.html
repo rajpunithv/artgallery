@@ -1,0 +1,33 @@
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+{% block content %}
+<h2 align="center">ONLINE ART GALLERY</h2>
+<nav class="navbar">
+<div class="logo">ART GALLERY</div>
+     <ul class="nav-links">
+         <div class="menu">
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li><a class="active" href="#">Login</a></li>
+  <li><a href="{% url 'gallery' %}">Gallery</a></li>
+  <li><a href="{% url 'payments' %}">Payments</a></li>
+         </div>
+     </ul>
+</nav>
+{% endblock %}
+<h3 align="center"><u>Login Page </u></h3>
+{% block 'body' %}
+<center>
+    <br>
+    <br>
+    <br>
+    <br>
+<a href="{% url 'artistlogin' %}" >Artist Login</a>
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+<a href="{% url 'customerlogin' %}">Customer Login</a>&nbsp;&nbsp;&nbsp;
+</center>
+{% endblock %}

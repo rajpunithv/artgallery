@@ -1,0 +1,20 @@
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link type="text/css" rel="stylesheet" href="{% static 'css/navi.css' %}" />
+
+{% block content %}
+<h2 align="center">ONLINE ART GALLERY</h2>
+<ul>
+  <li><a href="{% url 'artisthome' %}">Home</a></li>
+  <li><a href="#changepassword">Change Password</a></li>
+  <li><a class="active" href="{% url 'uploadarts' %}">Upload Arts</a></li>
+  <li><a href="{% url 'artpayments' %}">Arts Payments</a></li>
+  <li><a href="{% url 'artistlogout' %}">Logout</a></li>
+</ul>
+{% endblock %}
+
+{% block 'body' %}
+
+<p>I am in Payments Page</p>
+
+{% endblock %}

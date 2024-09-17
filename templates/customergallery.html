@@ -1,0 +1,92 @@
+{% load static %}
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link type="text/css" rel="stylesheet" href="{% static 'css/navi.css' %}" />
+<style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .art-item {
+            margin: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .art-item:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .art-item img {
+            max-width: 250px;
+            display: block;
+        }
+
+        .art-description {
+            text-align: center;
+            padding: 10px;
+        }
+</style>
+{% block content %}
+<h2 align="center">ONLINE ART GALLERY</h2>
+<ul>
+  <li><a href="{% url 'customerhome' %}">Home</a></li>
+  <li><a href="#changepassword">Change Password</a></li>
+  <li><a class="active" href="{% url 'customergallery' %}">Gallery</a></li>
+  <li><a href="{% url 'customerpayments' %}">Payments</a></li>
+  <li style="float:right"><a href="{% url 'customerlogout' %}">Logout</a></li>
+</ul>
+{% endblock %}
+
+{% block 'body' %}
+
+
+<div class="gallery-container">
+    <div class="art-item">
+        <img src="https://worlduniversityofdesign.ac.in/assets/images/bgs/contempary-art-practice-banner.jpg" alt=" Art 1">
+        <div class="art-description">An exploration of colors and emotions.</div>
+    </div>
+    <div class="art-item">
+        <img src="https://images.squarespace-cdn.com/content/v1/537d3010e4b0bb0d036edb5d/bc48ab58-b1ec-4b69-bde9-e95b1399a2b7/Kerry+Deane+-+Egyptian+Mystery+web.jpg" alt="Sample Art 2">
+        <div class="art-description"> A journey through abstract shapes.</div>
+    </div>
+    <div class="art-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgyz3INwnbY9H_HtngbemoC7dOeGJZKpIF3A&usqp=CAU" alt="Sample Art 3">
+        <div class="art-description">Monalisa the artwork</div>
+    </div>
+    <div class="art-item">
+        <img src="https://cdn.thecollector.com/wp-content/uploads/2022/02/arts-and-craft-society-card-with-fabric-william-morris.jpg?width=1400&quality=70" alt="Sample Art 4">
+        <div class="art-description"> A reflection on urban life and solitude.</div>
+    </div>
+    <div class="art-item">
+        <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFbUPJTjgpH0txf8vDcP6MBg7eB5-uYnubA&usqp=CAU" alt="Sample Art 5">
+        <div class="art-description"> The dance of light and shadow in a serene landscape.</div>
+    </div>
+    <div class="art-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfA4qRUy8VA-fvcDcmqoXZbKufdystYmwDOp1dvoDCOdZk05kQeoKXQldJ_UUDVWZTLbE&usqp=CAU" alt="Sample Art 6">
+        <div class="art-description">An ode to the vibrant spirit of summer.</div>
+    </div>
+    <div class="art-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxEoxV222c85QyhnIVGLHdHp2GiGJKzO2RSg&usqp=CAU" alt="Sample Art 7">
+        <div class="art-description">Capturing the fleeting moments of autumn.</div>
+    </div>
+    <div class="art-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb5GBL_CFhctspGTSThB_dvmRQHG5aDnaf3Q&usqp=CAU" alt="Sample Art 8">
+        <div class="art-description"> A dreamy portrayal of winter's embrace.</div>
+    </div>
+</div>
+
+
+
+{% endblock %}

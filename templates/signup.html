@@ -1,0 +1,41 @@
+{% extends 'login.html' %}
+{% block content %}
+<div class="b1">
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-inner">
+               <form action="" method="post" class="signup">
+                  {% csrf_token %}
+                  <div class="field">
+                     <input type="text" name="user" placeholder="Username" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" name="email" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" name="pass1" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" name="pass2" placeholder="Confirm password" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+                   <h6 align="center" style="color:purple">{{msg1}}</h6>
+                  <h6 align="center" style="color:purple">{{message}}</h6>
+                  <h6 align="center" style="color:purple">{{msg2}}</h6>
+                  <div class="signup-link">
+                     Have an account? <a href="{% url 'login' %}">Login now</a>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   {% endblock %}

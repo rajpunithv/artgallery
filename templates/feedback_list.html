@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback List</title>
+</head>
+<body>
+    <h1>Feedback List</h1>
+    <ul>
+        {% for entry in feedback_entries %}
+            <li>
+                <strong>{{ entry.name }}</strong> ({{ entry.get_feedback_type_display }}): {{ entry.comment }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
